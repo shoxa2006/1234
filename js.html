@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="input" placeholder="Ikki xonali son">
+    <button onclick="myFunction()">Try it</button>
+    <h1 id="demo"></h1>
+    <input type="number" id="input2" placeholder="Uch xonali son">
+    <button onclick="myFunctiontwo()">Try it</button>
+    <h1 id="demo1"></h1>
+    <input type="number" id="input3" placeholder="Tort xonali son">
+    <button onclick="myFunctionthree()">Try it</button>
+    <h1 id="demo2"></h1>
+    <script>
+        function myFunction() {
+            var n = document.getElementById("input").value;
+            var num = parseInt(n / 10);
+            var num2 = n % 10;
+            var x = document.getElementById("demo");
+            var plus = num + num2;
+            x.innerHTML = plus;
+        }
+
+        function myFunctiontwo() {
+            var n = document.getElementById("input2").value;
+            var num = parseInt(n / 100);
+            var num2 = n % 100;
+            var num3 = parseInt(num2 / 10);
+            var num4 = num2 % 10;
+            var x = document.getElementById("demo1");
+            var plustwo = (num + num3) / num4;
+            x.innerHTML = plustwo;
+        }
+
+
+        function myFunctionthree() {
+            var n = document.getElementById("input3").value;
+            var num = parseInt(n / 1000);
+            var num1 = n % 1000;
+            var num2 = parseInt(num1 / 100);
+            var num3 = num1 % 100;
+            var num4 = parseInt(num3 / 10);
+            var num5 = num3 % 10;
+            var x = document.getElementById("demo2");
+            var plus = (num * 10) + num2 + (num4 * 1000) + (num5 * 100);
+            x.innerHTML = plus;
+        }
+    </script>
+</body>
+
+</html>
